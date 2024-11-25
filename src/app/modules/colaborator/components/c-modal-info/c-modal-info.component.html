@@ -1,0 +1,20 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-12">
+            <h2 mat-dialog-title>Task Details</h2>
+            <mat-dialog-content *ngIf="taskDetails; else loading">
+            <p><strong>Title:</strong> {{ taskDetails.title }}</p>
+            <p><strong>Description:</strong> {{ taskDetails.description }}</p>
+            <p><strong>Due Date:</strong> {{ taskDetails.due_date | date }}</p>
+            <p><strong>Complete:</strong> {{ taskDetails.is_complete ? 'Yes' : 'No' }}</p>
+            </mat-dialog-content>
+            <ng-template #loading>
+            <p>Loading task details...</p>
+            </ng-template>
+            <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Close</button>
+            </mat-dialog-actions>
+
+        </div>
+    </div>
+</div>

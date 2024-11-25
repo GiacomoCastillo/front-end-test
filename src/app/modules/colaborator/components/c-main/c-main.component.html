@@ -1,0 +1,30 @@
+<div class="container m-0 p-0 h-100">
+    <!-- Topbar / Navbar -->
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2">
+                <a class="navbar-brand" href="#">Front End Test</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" *ngFor="let item of listMenu">
+                            <a class="nav-link" (click)="navigate(item.route)" style="cursor: pointer;">
+                                <i class="{{item.icon}}" style="color: #535ee1;"></i>
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+    <!-- Main Content -->
+    <div class="row m-0 p-0"> <!-- Adjust margin-top to prevent overlap with fixed navbar -->
+        <div class="col-12 pt-5">
+            <!-- The router outlet will display the respective content here -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
