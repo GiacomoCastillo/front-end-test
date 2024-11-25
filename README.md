@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 You can access the public version of the application at the following URL: [https://frontendtest-26f1a.web.app](https://frontendtest-26f1a.web.app).
 
 ## API URL
+You can deploy localy and test with the public link of ANGULAR.
 
 The API URL is defined in the `services` of the project. You can find it in the appropriate service files, typically under the `src/app/modules/shared/services` directory. Make sure to update the API URL in the corresponding service file when deploying to different environments.
 
